@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0B1426;
+  --foreground: #ededed;
+  --secondary: rgb(159, 159, 159);
+
+  --bg-rad: radial-gradient(
+    45.87% 50% at 50% 50%,
+    #3763c1 0%,
+    rgba(35, 70, 157, 0.5) 38.39%,
+    rgba(20, 43, 114, 0) 100%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0B1426;
+    --foreground: #ededed;
+    --secondary: rgb(159, 159, 159);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.clamp-imp {
+  @apply !line-clamp-6;
+}
+
+.bg-rad {
+  background: var(--bg-rad);
+}
+
+main {
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  background: var(--bg-rad);
+}
+
+.divider {
+  box-sizing: border-box;
+  margin-block: 1rem;
+  background-color: #323c52;
+  height: 1px;
+}
+
+.card-bg {
+  background: linear-gradient(to top, rgba(34, 77, 103, 0.8) 10%, rgba(8, 28, 14, 0.8) 30%); 
+}
+
+
